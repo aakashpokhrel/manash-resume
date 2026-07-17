@@ -1,0 +1,311 @@
+:root {
+  --ink: #222222;
+  --text: #333333;
+  --text-muted: #555555;
+  --border: #dddddd;
+  --contact-bg: #1f1f1f;
+  --header-bg: #1f1f1f;
+  --avatar-a: #34d1a5;
+  --avatar-b: #14b892;
+  --page-bg: #eef0f2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  line-height: 1.25;
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+.toolbar button {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.toolbar button:hover {
+  border-color: var(--ink);
+}
+
+.page {
+  max-width: 850px;
+  margin: 0 auto 3rem;
+  background: #ffffff;
+  padding: 2.1rem 2.75rem 2.4rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  margin: 0;
+  font-family: "Poppins", "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 1.9rem;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.role {
+  margin: 0.25rem 0 0;
+  font-family: "Poppins", "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--avatar-a), var(--avatar-b));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+/* Contact box */
+.contact-box {
+  background: var(--contact-bg);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 0.45rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem 2.5rem;
+  margin-bottom: 0.65rem;
+}
+
+.contact-row {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+}
+
+.contact-label {
+  font-weight: 700;
+}
+
+.contact-value {
+  color: #eaeaea;
+}
+
+/* Section headers */
+.section-header {
+  display: inline-block;
+  background: var(--header-bg);
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  border-radius: 999px;
+  padding: 0.28rem 1.1rem;
+  margin: 0 0 0.4rem;
+}
+
+.block {
+  margin-bottom: 0.4rem;
+}
+
+.summary {
+  margin: 0;
+  color: var(--text);
+  text-align: justify;
+  font-size: 0.82rem;
+}
+
+/* Work experience */
+.job {
+  margin-bottom: 0.28rem;
+}
+
+.job:last-child {
+  margin-bottom: 0;
+}
+
+.job-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.job-company {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+.job-dates {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.job-title {
+  margin: 0.1rem 0 0.3rem;
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.job-subheading {
+  margin: 0.28rem 0 0.1rem;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--ink);
+}
+
+.bullets {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.04rem;
+  font-size: 0.78rem;
+  color: var(--text);
+}
+
+/* Education */
+.edu-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.3rem;
+}
+
+.edu-row:last-child {
+  margin-bottom: 0;
+}
+
+.edu-degree {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--ink);
+}
+
+.edu-school {
+  margin: 0.05rem 0 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.edu-date {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Footer two-column */
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2.5rem;
+}
+
+.footer-col {
+  min-width: 0;
+}
+
+.two-col-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.25rem;
+  row-gap: 0.1rem;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 2rem 1.5rem 2.5rem;
+  }
+
+  .name {
+    font-size: 1.7rem;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  .no-print,
+  .toolbar {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff;
+  }
+
+  .page {
+    box-shadow: none;
+    margin: 0;
+    max-width: 100%;
+    padding: 0.22in 0.45in;
+  }
+
+  .block,
+  .job {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "manash-pokhrel-resume",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "serve": "npx serve ."
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
